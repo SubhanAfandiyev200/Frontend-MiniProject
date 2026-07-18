@@ -1,5 +1,134 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+}
+
+.top-header {
+    display: flex;
+    height: 30px;
+}
+
+.top-header span {
+    line-height: 30px;
+    font-family: GTUltra, Lato, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #999;
+    margin-left: auto;
+}
+
+.main-container {
+    width: 97.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-row {
+    height: 105px;
+}
+
+.bottom-header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.top-header-logo img {
+    height: 56.5px;
+    width: auto;
+    margin-top: -31px;
+    margin-left: 8px;
+}
+
+.header-navbar {
+    margin-bottom: -8px;
+    margin-left: -10px;
+}
+
+.header-navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-navbar ul li {
+font-family: GTUltra, Lato, Noto Sans, Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-size: .8285714285714286rem;
+    line-height: 1.5rem;
+    font-weight: 670;
+    letter-spacing: .025em;
+}
+
+.header-navbar a {
+    text-decoration: none;
+    color: rgb(51 51 51);
+    font-size: 13.5px;
+}
+
+.bottom-header-right {
+    margin-right: 6px;
+    margin-bottom: -5px;
+}
+
+.bottom-header-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    margin-right: 5px;
+}
+
+.bottom-header-right ul li {
+    font-family: GTUltra, Lato, Noto Sans, Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-size: .9285714285714286rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .025em;
+}
+
+.bottom-header-right a {
+    letter-spacing: 1.3px;
+    font-size: 11px;
+    color: #7f7f7f;
+    text-decoration: none;
+}
+
+.bottom-header-right i {
+    color: #7f7f7f;
+    font-size: 18px;
+}
+
+.bottom-header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.bottom-header-icons i {
+    font-size: 19px;
+    color: #7f7f7f;
+}
+
+.header-navbar a:hover {
+    color: #e8602a;
+}
+
+.bottom-header-right a:hover {
+    color: #e8602a;
 }

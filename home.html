@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <input type="checkbox" id="mailToggle" class="mail-toggle">
     <header>
         <div class="header">
             <div class="main-container">
@@ -32,13 +33,280 @@
                             <nav>
                                 <div class="header-navbar">
                                     <ul>
-                                        <li><a href="">Featured</a></li>
-                                        <li><a href="">Bags & Luggage</a></li>
-                                        <li><a href="">Travel</a></li>
-                                        <li><a href="">Wallets</a></li>
-                                        <li><a href="">Tech</a></li>
-                                        <li><a href="">Accessories</a></li>
-                                        <li><a href="">About us</a></li>
+                                        <li class="nav-item">
+                                            <a href="">Featured</a>
+                                            <div class="mega-menu">
+                                                <div class="first-mega-menu">
+                                                    <div class="featured-mega-menu-left">
+                                                        <p>Popular</p>
+                                                        <ul>
+                                                            <li><a href="">Bestsellers</a></li>
+                                                            <li><a href="">New releases <span
+                                                                        class="badge badge-new">NEW</span></a></li>
+                                                            <li><a href="">Students & Graduates</a></li>
+                                                            <li><a href="">The Outlet <span
+                                                                        class="badge badge-save">SAVE</span></a></li>
+                                                            <li><a href="">Value Sets <span
+                                                                        class="badge badge-save">SAVE</span></a></li>
+                                                        </ul>
+                                                        <p>By Activity</p>
+                                                        <ul>
+                                                            <li><a href="">Work</a></li>
+                                                            <li><a href="">Travel</a></li>
+                                                            <li><a href="">Outdoor</a></li>
+                                                            <li><a href="">Campus</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="featured-mega-menu-right">
+                                                        <p>By Collection</p>
+                                                        <span class="tech-tile">Tech</span>
+                                                        <span class="work-tile">Work</span>
+                                                        <span class="travel-tile">Travel</span>
+                                                        <img src="./assets/images/cinch.avif">
+                                                        <img src="./assets/images/lite.avif">
+                                                        <img src="./assets/images/venture.avif">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="">Bags & Luggage</a>
+                                            <div class="mega-menu">
+                                                <div class="bags-container">
+                                                    <div class="bags-menu">
+                                                        <a href="" class="bags-item">
+                                                            <img src="./assets/images/bag1.avif">
+                                                            <span>Luggage</span>
+                                                        </a>
+                                                        <a href="" class="bags-item">
+                                                            <img src="./assets/images/bag2.avif">
+                                                            <span>Backpacks</span>
+                                                        </a>
+                                                        <a href="" class="bags-item">
+                                                            <img src="./assets/images/bag3.avif"
+                                                                alt="Slings & Crossbody">
+                                                            <span>Slings & Crossbody</span>
+                                                        </a>
+                                                        <a href="" class="bags-item">
+                                                            <img src="./assets/images/bag4.avif"
+                                                                alt="Tote & Shoulder Bags">
+                                                            <span>Tote & Shoulder Bags</span>
+                                                        </a>
+                                                        <a href="" class="bags-item">
+                                                            <img src="./assets/images/bag5.avif"
+                                                                alt="Market & Cooler Bags">
+                                                            <span>Market & Cooler Bags</span>
+                                                        </a>
+                                                        <a href="" class="bags-item">
+                                                            <img src="./assets/images/bag6.avif">
+                                                            <span>Work Bags</span>
+                                                        </a>
+                                                        <a href="" class="bags-item">
+                                                            <img src="./assets/images/bag7.avif">
+                                                            <span>Duffel Bags</span>
+                                                        </a>
+                                                        <a href="" class="bags-item bags-item-all">
+                                                            <p class="plus-circle"><i class="fa-solid fa-plus"></i></p>
+                                                            <span class="plus-text">All Bags & Luggage</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="">Travel</a>
+                                            <div class="mega-menu">
+                                                <div class="travel-container">
+                                                    <div class="travel-menu">
+                                                        <a href="" class="travel-item">
+                                                            <img src="./assets/images/travel1.avif">
+                                                            <span>Luggage</span>
+                                                        </a>
+                                                        <a href="" class="travel-item">
+                                                            <img src="./assets/images/travel2.avif">
+                                                            <span>Travel Bags</span>
+                                                        </a>
+                                                        <a href="" class="travel-item">
+                                                            <img src="./assets/images/travel3.avif">
+                                                            <span>Travel Slings & <br>Crossbody Bags</span>
+                                                        </a>
+                                                        <a href="" class="travel-item">
+                                                            <img src="./assets/images/travel4.avif">
+                                                            <span>RFID and Travel <br> Wallets</span>
+                                                        </a>
+                                                        <a href="" class="travel-item">
+                                                            <img src="./assets/images/travel5.avif">
+                                                            <span>Packing Cubes</span>
+                                                        </a>
+                                                        <a href="" class="travel-item">
+                                                            <img src="./assets/images/travel6.avif">
+                                                            <span>Toiletry Bags</span>
+                                                        </a>
+                                                        <a href="" class="travel-item">
+                                                            <img src="./assets/images/travel7.avif">
+                                                            <span>Travel & Tech <br> Pouches</span>
+                                                        </a>
+                                                        <a href="" class="travel-item">
+                                                            <img src="./assets/images/travel8.avif">
+                                                            <span>Travel Accessories</span>
+                                                        </a>
+                                                        <a href="" class="travel-item travel-item-all">
+                                                            <p class="plus-circle"><i class="fa-solid fa-plus"></i></p>
+                                                            <span>All Travel</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="">Wallets</a>
+                                            <div class="mega-menu">
+                                                <div class="wallet-container">
+                                                    <div class="wallet-menu">
+                                                        <a href="" class="wallet-item">
+                                                            <img src="./assets/images/wallet1.avif">
+                                                            <span>Billfolds</span>
+                                                        </a>
+                                                        <a href="" class="wallet-item">
+                                                            <img src="./assets/images/wallet2.avif">
+                                                            <span>Card Holders</span>
+                                                        </a>
+                                                        <a href="" class="wallet-item">
+                                                            <img src="./assets/images/wallet3.avif">
+                                                            <span>Zip Wallets</span>
+                                                        </a>
+                                                        <a href="" class="wallet-item">
+                                                            <img src="./assets/images/wallet4.avif">
+                                                            <span>Passport Holders</span>
+                                                        </a>
+                                                        <a href="" class="wallet-item">
+                                                            <img src="./assets/images/wallet5.avif">
+                                                            <span>RFID Protected</span>
+                                                        </a>
+                                                        <a href="" class="wallet-item wallet-item-all">
+                                                            <p class="plus-circle"><i class="fa-solid fa-plus"></i></p>
+                                                            <span>All Wallets</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="">Tech</a>
+                                            <div class="mega-menu">
+                                                <div class="tech-container">
+                                                    <div class="tech-menu">
+                                                        <a href="" class="tech-item">
+                                                            <img src="./assets/images/tech1.avif">
+                                                            <span>iPhone Cases</span>
+                                                        </a>
+                                                        <a href="" class="tech-item">
+                                                            <img src="./assets/images/tech2.avif">
+                                                            <span>Pixel Cases</span>
+                                                        </a>
+                                                        <a href="" class="tech-item">
+                                                            <img src="./assets/images/tech3.avif">
+                                                            <span>Samsung cases</span>
+                                                        </a>
+                                                        <a href="" class="tech-item">
+                                                            <img src="./assets/images/tech4.avif">
+                                                            <span>Earbud Cases</span>
+                                                        </a>
+                                                        <a href="" class="tech-item">
+                                                            <img src="./assets/images/tech5.avif">
+                                                            <span>AirTag Cases</span>
+                                                        </a>
+                                                        <a href="" class="tech-item">
+                                                            <img src="./assets/images/tech6.avif">
+                                                            <span>Watch Bands</span>
+                                                        </a>
+                                                        <a href="" class="tech-item">
+                                                            <img src="./assets/images/tech7.avif">
+                                                            <span>Laoptop & Tablet <br>Sleeves</span>
+                                                        </a>
+                                                        <a href="" class="tech-item">
+                                                            <img src="./assets/images/tech8.avif">
+                                                            <span>Tech Organizers</span>
+                                                        </a>
+                                                        <a href="" class="tech-item tech-item-all">
+                                                            <p class="plus-circle"><i class="fa-solid fa-plus"></i></p>
+                                                            <span>All Tech</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="">Accessories</a>
+                                            <div class="mega-menu">
+                                                <div class="acc-container">
+                                                    <div class="acc-menu">
+                                                        <a href="" class="acc-item">
+                                                            <img src="./assets/images/acc1.avif">
+                                                            <span>Attachables</span>
+                                                            <span class="badge badge-new">NEW</span>
+                                                        </a>
+                                                        <a href="" class="acc-item">
+                                                            <img src="./assets/images/acc2.avif">
+                                                            <span>Packing Cubes</span>
+                                                        </a>
+                                                        <a href="" class="acc-item">
+                                                            <img src="./assets/images/acc3.avif">
+                                                            <span>Key Holders</span>
+                                                        </a>
+                                                        <a href="" class="acc-item">
+                                                            <img src="./assets/images/acc4.avif">
+                                                            <span>Pouches</span>
+                                                        </a>
+                                                        <a href="" class="acc-item">
+                                                            <img src="./assets/images/acc5.avif">
+                                                            <span>Folios</span>
+                                                        </a>
+                                                        <a href="" class="acc-item acc-item-all">
+                                                            <p class="plus-circle"><i class="fa-solid fa-plus"></i></p>
+                                                            <span>All Accessories</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="">About Us</a>
+                                            <div class="mega-menu">
+                                                <div class="about-container">
+                                                    <div class="about-menu">
+                                                        <a href="" class="about-item">
+                                                            <img src="./assets/images/about1.avif" alt="Our Story">
+                                                            <span>Our Story</span>
+                                                        </a>
+                                                        <a href="" class="about-item">
+                                                            <img src="./assets/images/about2.avif" alt="Our Materials">
+                                                            <span>Our Materials</span>
+                                                        </a>
+                                                        <a href="" class="about-item">
+                                                            <img src="./assets/images/about3.avif"
+                                                                alt="Responsible Business">
+                                                            <span>Responsible<br>Business</span>
+                                                        </a>
+                                                        <a href="" class="about-item">
+                                                            <img src="./assets/images/about4.avif"
+                                                                alt="Good Business Update">
+                                                            <span>Good Business<br>Update</span>
+                                                        </a>
+                                                        <a href="" class="about-item">
+                                                            <img src="./assets/images/about5.avif" alt="The Journal">
+                                                            <span>The Journal</span>
+                                                        </a>
+                                                        <a href="" class="about-item">
+                                                            <img src="./assets/images/about6.avif"
+                                                                alt="Shipping & Delivery">
+                                                            <span>Shipping &<br>Delivery</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </nav>
@@ -48,8 +316,10 @@
                                 <li><a href="">Need help?</a></li>
                                 <li><a href="">Find In-Store</a></li>
                                 <li class="bottom-header-icons">
-                                    <i class="fa-regular fa-envelope"></i>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <label for="mailToggle" class="mail-icon-btn">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </label>
+                                    <i class="fa-solid fa-magnifying-glass search-icon-btn"></i>
                                     <i class="fa-solid fa-cart-shopping"></i>
                                 </li>
                             </ul>
@@ -59,6 +329,37 @@
             </div>
         </div>
     </header>
+    <div class="search-overlay">
+        <button class="search-overlay-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="search-overlay-content">
+            <i class="fa-solid fa-magnifying-glass search-overlay-icon"></i>
+            <div class="search-input-wrap">
+                <input type="text" class="search-overlay-input" placeholder="Search">
+                <span class="search-underline"></span>
+                <span class="search-text-measure"></span>
+            </div>
+        </div>
+    </div>
+<div class="signup-modal-overlay">
+    <label for="mailToggle" class="signup-modal-backdrop"></label>
+    <div class="signup-modal">
+        <label for="mailToggle" class="signup-modal-close"><i class="fa-solid fa-xmark"></i></label>
+        <div class="signup-modal-left">
+            <img src="./assets/images/different-images.avif">
+
+
+
+        </div>
+
+        <div class="signup-modal-right">
+
+
+
+
+
+        </div>
+    </div>
+</div>
     <main>
         <section id="main-top-picture">
             <h1>Find a setup for<br> any trip</h1>
@@ -68,9 +369,216 @@
             <div class="main-upper-cards-text">
                 <h2>You'll love these...</h2>
             </div>
-            <div class="main-top-cards">
+            <div class="slider">
+                <div class="card-container">
+                    <div class="cards-viewport">
+                        <div class="cards-track">
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/1.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                    <span class="product-badge">New color</span>
+                                </div>
+                                <h3 class="product-name">Market Tote</h3>
+                                <p class="product-price">$39</p>
+                                <div class="product-colors">
+                                    <span class="swatch" style="--c:#2f2f2f"></span>
+                                    <span class="swatch" style="--c:#c7d4e0"></span>
+                                    <span class="swatch" style="--c:#2e3a52"></span>
+                                    <span class="swatch" style="--c:#b0ad5e"></span>
+                                    <span class="swatch" style="--c:#6d6a4a"></span>
+                                    <span class="swatch" style="--c:#6e3b3b"></span>
+                                    <span class="swatch is-selected"
+                                        style="background-image: url(./assets/images/color-0.jpg);"></span>
+                                    <span class="swatch" style="--c:#e5ddc8"></span>
+                                </div>
+                                <p class="product-desc">15L / Groceries, wine bottles, keys, wallet, light jacket</p>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/2.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                    <span class="product-badge">New</span>
+                                </div>
+                                <h3 class="product-name">Carryology Essentials Sling</h3>
+                                <p class="product-price">$119</p>
+                                <div class="product-colors">
+                                    <span class="swatch is-selected" style="--c:#1a1a1a"></span>
+                                    <span class="swatch" style="--c:#cfcfcf"></span>
+                                </div>
+                                <p class="product-desc">4L / Everyday sling with optimized organization and materials
+                                </p>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/3.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Hide & Seek <span class="name-sub">– RFID safe</span></h3>
+                                <p class="product-price">$89</p>
+                                <div class="product-colors">
+                                    <span class="swatch" style="--c:#2f2f2f"></span>
+                                    <span class="swatch" style="--c:#1a1a1a"></span>
+                                    <span class="swatch" style="--c:#2e3a52"></span>
+                                    <span class="swatch is-selected" style="--c:rgb(93 115 111)"></span>
+                                    <span class="swatch" style="--c:#6d6a4a"></span>
+                                    <span class="swatch" style="--c:#5a3a2a"></span>
+                                    <span class="swatch" style="--c:#a44a2a"></span>
+                                    <span class="swatch" style="--c:#c46a2a"></span>
+                                </div>
+                                <p class="product-desc">5 – 12+ cards, flat bills, coins</p>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/4.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Transit Carry-On</h3>
+                                <p class="product-price">$299</p>
+                                <div class="product-colors">
+                                    <span class="swatch" style="--c:rgb(54, 54, 54)"></span>
+                                    <span class="swatch" style="--c:rgb(233, 230, 222)"></span>
+                                    <span class="swatch is-selected" style="--c:rgb(33,46,65)"></span>
+                                    <span class="swatch" style="--c:rgb(93, 115, 111)"></span>
+                                    <span class="swatch" style="--c:rgb(180, 86, 40)"></span>
+                                    <span class="swatch" style="--c:rgb(88,65,75)"></span>
+                                </div>
+                                <p class="product-desc">42L volume / Hard shell, optimized for carry-on</p>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/5.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Lite Travel Pack 30L</h3>
+                                <p class="product-price">$199</p>
+                                <div class="product-colors">
+                                    <span class="swatch" style="--c:rgb(54 54 54)"></span>
+                                    <span class="swatch" style="--c:rgb(92 82 76)"></span>
+                                    <span class="swatch is-selected" style="--c:rgb(220 220 220)"></span>
+                                    <span class="swatch" style="--c:rgb(175, 68, 52)"></span>
+                                </div>
+                                <p class="product-desc">30L / Compact and optimized for carry-on</p>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/6.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Venture Ready Sling 2.5L</h3>
+                                <p class="product-price">$55 - $89</p>
+                                <div class="product-colors">
+                                    <span class="swatch" style="--c:rgb(54 54 54)"></span>
+                                    <span class="swatch" style="--c:rgb(204 208 208)"></span>
+                                    <span class="swatch" style="--c:rgb(49 69 68)"></span>
+                                    <span class="swatch" style="--c:rgb(180 86 40)"></span>
+                                    <span class="swatch is-selected" style="--c:rgb(200 177 125)"></span>
+                                </div>
+                                <p class="product-desc">2.5L / A rugged little sling for daily adventure</p>
+                            </div>
+                            <div class="product-card apex">
+                                <div class="product-card-img apex">
+                                    <img src="./assets/images/7.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name ">Apex Slim Sleeve <span class="name-sub">– RFID safe</span>
+                                </h3>
+                                <p class="product-price ">$129</p>
+                                <div class="product-colors ">
+                                    <span class="swatch" style="--c:rgb(0 0 0)"></span>
+                                    <span class="swatch" style="--c:rgb(41 53 128)"></span>
+                                    <span class="swatch" style="--c:rgb(93 115 111)"></span>
+                                    <span class="swatch is-selected" style="--c:rgb(49 22 18)"></span>
+                                </div>
+                                <p class="product-desc ">6 - 8 cards, folded bills</p>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/8.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Pod Jacket Pro</h3>
+                                <p class="product-price">$39</p>
+                                <div class="product-colors">
+                                    <span class="swatch is-selected" style="--c:rgb(54 54 54)"></span>
+                                    <span class="swatch" style="--c:rgb(188 112 73)"></span>
+                                </div>
+                                <p class="product-desc">AirPods Pro 3</p>
+                            </div>
 
-            </div>
+
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/9.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Carabiner Trio</h3>
+                                <p class="product-price">$29</p>
+                                <div class="product-colors">
+                                    <span class="swatch is-selected"
+                                        style="background-image: url(./assets/images/color-1.jpg);"></span>
+                                </div>
+                                <p class="product-desc">Attach them to your bag, keys, pants and more</p>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/10.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Tech Kit</h3>
+                                <p class="product-price">$59</p>
+                                <div class="product-colors">
+                                    <span class="swatch is-selected" style="--c:rgb(54 54 54)"></span>
+                                    <span class="swatch" style="--c:rgb(91 91 88)"></span>
+                                    <span class="swatch"
+                                        style="background-image: url(./assets/images/color-2.png);"></span>
+                                    <span class="swatch" style="--c:rgb(59 77 107)"></span>
+                                    <span class="swatch" style="--c:rgb(33 46 65)"></span>
+                                    <span class="swatch" style="--c:rgb(168 184 178)"></span>
+                                    <span class="swatch" style="--c:rgb(93 115 111)"></span>
+                                    <span class="swatch" style="--c:rgb(180 86 40)"></span>
+                                    <span class="swatch" style="--c:rgb(228 217 203)"></span>
+                                </div>
+                                <p class="product-desc">Charger, mouse, powerbank, dongles, cables, earbuds</p>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/11.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Lite Travel Kit Pack 38L</h3>
+                                <p class="product-price">$229</p>
+                                <div class="product-colors">
+                                    <span class="swatch" style="--c:rgb(54 54 54)"></span>
+                                    <span class="swatch" style="--c:rgb(92 82 76)"></span>
+                                    <span class="swatch is-selected" style="--c:rgb(220 220 220)"></span>
+                                    <span class="swatch" style="--c:rgb(175 68 52)"></span>
+                                </div>
+                                <p class="product-desc">38L / Large format optimized for carry-on</p>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card-img">
+                                    <img src="./assets/images/12.avif">
+                                    <span class="show-inside">Show Inside <i class="fa-solid fa-plus plus"></i></span>
+                                </div>
+                                <h3 class="product-name">Venture Sling 6L</h3>
+                                <p class="product-price">$129</p>
+                                <div class="product-colors">
+                                    <span class="swatch" style="--c:rgb(54 54 54)"></span>
+                                    <span class="swatch" style="--c:rgb(204 208 208)"></span>
+                                    <span class="swatch is-selected" style="--c:rgb(49 69 68)"></span>
+                                </div>
+                                <p class="product-desc">6L / An organized sling that's ready for adventure</p>
+                            </div>
+                        </div>
+                        <button class="slider-arrow prev" aria-label="Previous"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-arrow next" aria-label="Next"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
         </section>
         <section id="main-center-pictures">
             <div class="row g-0">
@@ -122,6 +630,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <section id="main-video">
