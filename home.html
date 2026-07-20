@@ -320,7 +320,10 @@
                                         <i class="fa-regular fa-envelope"></i>
                                     </label>
                                     <i class="fa-solid fa-magnifying-glass search-icon-btn"></i>
-                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="cart-icon-wrap">
+                                        <i class="fa-solid fa-cart-shopping cart-icon-btn"></i>
+                                        <span class="cart-count">2</span>
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -340,26 +343,126 @@
             </div>
         </div>
     </div>
-<div class="signup-modal-overlay">
-    <label for="mailToggle" class="signup-modal-backdrop"></label>
-    <div class="signup-modal">
-        <label for="mailToggle" class="signup-modal-close"><i class="fa-solid fa-xmark"></i></label>
-        <div class="signup-modal-left">
-            <img src="./assets/images/different-images.avif">
+    <div class="cart-sidebar-overlay hide-cart-sidebar">
+        <div class="cart-sidebar-backdrop"></div>
+        <div class="cart-sidebar">
+            <button class="cart-sidebar-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="cart-sidebar-upper">
+                <span class="cart-icon-wrap">
+                    <i class="fa-solid fa-cart-shopping cart-icon-btn"></i>
+                    <span class="cart-count">2</span>
+                </span>
+                <p>Your shopping card</p>
+            </div>
+            <div class="cart-sidebar-container">
+                <div class="cart-sidebar-center">
+                    <div class="first-product">
+                        <div class="first-product-image">
+                            <img src="./assets/images/1.avif">
+                        </div>
+                        <div class="first-product-about">
+                            <div class="first-product-top">
+                                <h4 class="first-product-name">Market Tote</h4>
+                                <button class="first-product-remove"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                            <p class="first-product-color">Color: Jacaranda</p>
+                            <p class="first-product-finish">Finish: Canva Ripstop</p>
+                            <div class="first-product-bottom">
+                                <div class="first-product-count">
+                                    <label>Qty:</label>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <p class="first-product-price">$39 USD</p>
+                            </div>
+                        </div>
+                    </div>
 
 
 
-        </div>
-
-        <div class="signup-modal-right">
 
 
+                     <div class="second-product">
+                        <div class="second-product-image">
+                            <img src="./assets/images/2.avif">
+                        </div>
+                        <div class="second-product-about">
+                            <div class="second-product-top">
+                                <h4 class="second-product-name">Carryology Essentials Sling</h4>
+                                <button class="second-product-remove"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                            <p class="second-product-color">Color: Black Ash</p>
+                            <p class="second-product-finish">Finish: Baida Nylon</p>
+                            <div class="second-product-bottom">
+                                <div class="second-product-count">
+                                    <label>Qty:</label>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <p class="second-product-price">$119 USD</p>
+                            </div>
+                        </div>
+                    </div>
 
 
 
+
+
+                </div>
+                <div class="cart-sidebar-lower">
+                    <div class="cart-sidebar-price">
+                        <p>SUBTOTAL</p>
+                        <p>$ 158 USD</p>
+                    </div>
+                    <button class="pay-link-btn">Pay securely with<img src="./assets/images/link-image.jpg"
+                            alt="Link"></button>
+                    <button class="go-to-checkout">GO TO CHECKOUT</button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    <div class="signup-modal-overlay">
+        <label for="mailToggle" class="signup-modal-backdrop"></label>
+        <div class="signup-modal">
+            <label for="mailToggle" class="signup-modal-close"><i class="fa-solid fa-xmark"></i></label>
+            <div class="signup-modal-left">
+                <img src="./assets/images/different-images.avif">
+            </div>
+            <div class="signup-modal-right">
+                <p class="up-message">GET IN FIRST</p>
+                <span>New releases and exclusives in your inbox</span>
+                <div class="email-box">
+                    <input type="email" placeholder="Enter your email to register">
+                    <button class="submit-btn">Submit</button>
+                </div>
+                <p class="signupMessage"></p>
+                <div class="lowest-message-main">
+                    <p>You are signing up to receive product updates and newsletters. By signing up, you are
+                        consenting to our <a href>privacy policy</a> but you can opt out at any time</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <section id="main-top-picture">
             <h1>Find a setup for<br> any trip</h1>

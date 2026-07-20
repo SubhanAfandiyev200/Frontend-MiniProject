@@ -1,16 +1,17 @@
 "use strict"
 
-const emailInput = document.getElementById('emailInput');
-const submitBtn = document.getElementById('submitBtn');
-emailInput.addEventListener('focus', function () {
-    submitBtn.classList.add('active');
+document.querySelectorAll('.email-box').forEach(box => {
+    const input = box.querySelector('input');
+    const btn = box.querySelector('.submit-btn');
+    const msg = box.parentElement.querySelector('.signupMessage');
+
+    input.addEventListener('focus', () => btn.classList.add('active'));
+    input.addEventListener('blur', () => btn.classList.remove('active'));
+    btn.addEventListener('click', () => {
+        msg.textContent = "Check your email for a confirmation message. Thanks for subscribing!";
+    });
 });
-emailInput.addEventListener('blur', function () {
-    submitBtn.classList.remove('active');
-});
-submitBtn.addEventListener('click', function () {
-    document.querySelector('.signupMessage').textContent = "Check your email for a confirmation message. Thanks for subscribing!";
-});
+
 const track = document.querySelector('.cards-track');
 const cards = document.querySelectorAll('.product-card');
 const prevBtn = document.querySelector('.slider-arrow.prev');
@@ -31,6 +32,7 @@ prevBtn.addEventListener('click', () => {
     if (index > 0) { index--; updateSlider(); }
 });
 updateSlider();
+
 const headerNavbar = document.querySelector('.header-navbar');
 const navItems = document.querySelectorAll('.nav-item');
 let isMenuOpen = false;
@@ -48,6 +50,7 @@ headerNavbar.addEventListener('mouseleave', () => {
     isMenuOpen = false;
     headerNavbar.classList.remove('switching');
 });
+
 const searchIconBtn = document.querySelector('.search-icon-btn');
 const searchOverlay = document.querySelector('.search-overlay');
 const searchOverlayClose = document.querySelector('.search-overlay-close');
@@ -68,3 +71,22 @@ searchOverlayInput.addEventListener('input', () => {
     searchTextMeasure.textContent = searchOverlayInput.value;
     searchUnderline.style.width = searchTextMeasure.offsetWidth + 'px';
 });
+const cartIconBtn = document.querySelector('.cart-icon-wrap');
+const cartSidebarOverlay = document.querySelector('.cart-sidebar-overlay');
+const cartSidebarClose = document.querySelector('.cart-sidebar-close');
+const cartSidebarBackdrop = document.querySelector('.cart-sidebar-backdrop');
+
+cartIconBtn.addEventListener('click', () => {
+    cartSidebarOverlay.classList.remove('hide-cart-sidebar');
+    setTimeout(() => {
+        cartSidebarOverlay.classList.add('open');
+    }, 10);
+});
+
+function closeCart() {
+    cartSidebarOverlay.classList.remove('open');
+    cartSidebarOverlay.classList.add('hide-cart-sidebar');
+}
+
+cartSidebarClose.addEventListener('click', closeCart);
+cartSidebarBackdrop.addEventListener('click', closeCart);
