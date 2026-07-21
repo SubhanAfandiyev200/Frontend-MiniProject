@@ -247,10 +247,10 @@
     position: absolute;
     left: 11px;
     bottom: 16px;
-    background-color: #5f7d70;
-    color: #fff;
+    background-color: white;
+    color: #cd5634;
     font-family: 'Lato', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     padding: 3px 9px;
     border-radius: 6px;
@@ -1113,9 +1113,6 @@
 
 }
 
-
-
-
 .cart-sidebar {
     position: relative;
     background-color: #fff;
@@ -1132,7 +1129,6 @@
     transform: translateX(0);
 }
 
-
 .cart-sidebar-close {
     position: absolute;
     top: 15px;
@@ -1144,8 +1140,6 @@
     cursor: pointer;
     z-index: 10;
 }
-
-
 
 .cart-sidebar-upper {
     width: calc(100% + 80px);
@@ -1227,7 +1221,6 @@
     letter-spacing: .5px;
     line-height: normal;
 }
-
 
 .pay-link-btn {
     display: flex;
@@ -1312,7 +1305,7 @@
 
 .first-product-name {
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: #333;
     cursor: pointer;
@@ -1372,7 +1365,6 @@
 .first-product-name:hover {
     color: #e8602a;
 }
-
 
 .second-product {
     display: flex;
@@ -1462,4 +1454,515 @@
 
 .second-product-name:hover {
     color: #e8602a;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(34 34 34);
+    height: 534.8px;
+    padding: 16px 108px 44px 87px;
+    overflow: hidden;
+}
+
+.footer-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-top {
+    height: 410px;
+    width: 100%;
+    display: flex;
+}
+
+.top-footer-left {
+    height: 100%;
+    margin-top: 10px;
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-footer-right {
+    height: 100%;
+    width: 492px;
+}
+
+.footer-col h4 {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgb(155 155 155);
+    cursor: default;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.footer-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 23px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: rgb(155 155 155);
+    font-size: 10px;
+    font-weight: 550;
+    letter-spacing: 1.2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-col ul li a:hover {
+    color: rgb(205 76 32)
+}
+
+.footer-logos i {
+    color: rgb(155 155 155);
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.footer-logos i:hover {
+    color: rgb(205 76 32);
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.footer-logos img {
+    height: 75px;
+    margin-top: -27px;
+    margin-right: -8px;
+    color: white;
+}
+
+.footer-bottom {
+    margin-left: -87px;
+    position: relative;
+    margin-right: -108px;
+    padding-left: 87px;
+    padding-right: 108px;
+
+    border-top: 1px solid rgb(155, 155, 155);
+}
+
+.footer-bottom-left {
+    display: flex;
+    gap: 3px;
+}
+
+.footer-bottom-left p {
+    color: rgb(155 155 155);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-top: 50px;
+    font-weight: 500;
+}
+
+.footer-bottom-left img {
+    height: 128px;
+    margin-top: -7px;
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+.footer-bottom-right {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-55%);
+
+}
+
+.footer-bottom-left a {
+    color: rgb(205 76 32);
+    margin-top: 46.5px;
+    font-size: 13px;
+    font-weight: 500;
+
+}
+
+#main-upper-cards {
+    width: 100%;
+    height: 632.46px;
+    background-color: rgb(239 239 239)
+}
+
+.main-upper-cards-text {
+    width: 100%;
+    height: 118.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-upper-cards-text h2 {
+    color: rgb(51 51 51);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.45rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.card-container {
+    width: 1176px;
+    height: 514.16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -21px;
+}
+
+.slider {
+    position: relative;
+    max-width: 1216px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cards-viewport {
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.cards-track {
+    display: flex;
+    gap: 4px;
+    transition: transform 0.45s ease;
+}
+
+.product-card {
+    flex: 0 0 calc((100% - 11px) / 3);
+    background-color: #f7f7f7;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.product-card-img {
+    position: relative;
+    background-color: #f7f7f7;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-card.apex {
+    flex: 0 0 calc((100% - 11px) / 3);
+    background-color: #4e4e4e;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.product-card-img.apex {
+    position: relative;
+    background-color: #4e4e4e;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-card.apex .product-name {
+    color: #ffffff !important;
+}
+
+.product-card.apex .product-price {
+    color: #ffffff !important;
+}
+
+.product-card.apex .product-desc {
+    color: #ffffff !important;
+}
+
+.product-card.apex .name-sub {
+    color: rgb(219 219 219) !important;
+}
+
+.product-card-img img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+
+
+.plus {
+    color: rgb(147, 147, 147);
+}
+
+.show-inside {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgb(219 219 219);
+    color: rgb(51 51 51);
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+    padding: 3px 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.product-card:hover .show-inside {
+    opacity: 1;
+}
+
+.product-name {
+    font-family: GTUltra, Lato, Noto Sans, Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-size: .8285714285714286rem;
+    line-height: 1.5rem;
+    font-weight: 550;
+    letter-spacing: .025em;
+    color: rgb(51 51 51);
+    margin: 12px 0 3px 6px;
+}
+
+.name-sub {
+    color: #8a8a8a;
+    font-weight: 550;
+}
+
+.product-price {
+    font-family: 'Lato', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: rgb(51 51 51);
+    margin-left: 8px;
+}
+
+.product-colors {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 10px 0 10px 8px;
+}
+
+.swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    background-color: var(--c);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.swatch.is-selected {
+    border: 1px solid #999 !important;
+    padding: 2px !important;
+    background-clip: content-box !important;
+}
+
+.product-desc {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    color: rgb(51 51 51);
+    line-height: 1.4;
+    left: 8px;
+    margin-left: 8px;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 180px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #b5b5b5;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 3;
+    padding: 10px;
+    line-height: 1;
+}
+
+.slider-arrow.prev {
+    left: -55px;
+    top: 230px;
+}
+
+.slider-arrow.next {
+    right: -55px;
+    top: 230px;
+}
+
+.slider-arrow:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#main-signup {
+    width: 100%;
+    height: 189.2px;
+    background-color: #efefef
+}
+
+#main-signup h2 {
+    line-height: 70px;
+    font-size: 1.4rem;
+    margin-left: 500px;
+    color: rgb(205 76 32);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+
+
+
+#main-product {
+    width: 100%;
+    background-color: rgb(78, 78, 78);
+    height: 1507.3px;
+}
+
+
+#main-full-off-features {
+    height: 2046.11px;
+    width: 100%;
+    background-color: #0c0d0d;
+}
+
+
+
+
+.letters img {
+    position: absolute;
+    width: 13.5%;
+}
+
+.letters .a {
+    top: -66px;
+    left: 0;
+
+}
+
+.letters .p {
+    top: 240px;
+    right: 0;
+}
+
+.letters .e {
+    bottom: 110px;
+    left: 0;
+}
+
+.letters .x {
+    bottom: -123px;
+    right: 0;
+}
+
+
+
+
+#main-video {
+    height: 800px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    background: linear-gradient(to bottom, #0c0d0d, #2a2b2c);
+}
+
+.letters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.youtube-video {
+    position: relative;
+    width: 600px;
+    max-width: 90%;
+    height: 600px;
+}
+
+.youtube-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+
+
+.full-off-features-container {
+    height: 100%;
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full-off-features-container .main-header h2 {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    color: rgb(255 255 255);
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+    padding-left: 500px;
+
+}
+
+.feature-row {
+    margin-bottom: 60px;
+}
+
+.feature-text {
+    padding: 0 40px;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    color: rgb(255 255 255);
+    font-family: 'Poppins', sans-serif;
+}
+.feature-text h3{
+     font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    color: rgb(255 255 255);
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px;
+}
+
+.feature-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.youtube-video-features {
+    height: 460px;
+    width: 566px;
+    padding-top: 80px;
 }

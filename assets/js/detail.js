@@ -70,3 +70,24 @@ function closeCart() {
 
 cartSidebarClose.addEventListener('click', closeCart);
 cartSidebarBackdrop.addEventListener('click', closeCart);
+
+const track = document.querySelector('.cards-track');
+const cards = document.querySelectorAll('.product-card');
+const prevBtn = document.querySelector('.slider-arrow.prev');
+const nextBtn = document.querySelector('.slider-arrow.next');
+let index = 0;
+const visible = 3;
+function updateSlider() {
+    const step = cards[1].offsetLeft - cards[0].offsetLeft;
+    track.style.transform = `translateX(${-index * step}px)`;
+
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index >= cards.length - visible;
+}
+nextBtn.addEventListener('click', () => {
+    if (index < cards.length - visible) { index++; updateSlider(); }
+});
+prevBtn.addEventListener('click', () => {
+    if (index > 0) { index--; updateSlider(); }
+});
+updateSlider();
