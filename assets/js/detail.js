@@ -91,3 +91,41 @@ prevBtn.addEventListener('click', () => {
     if (index > 0) { index--; updateSlider(); }
 });
 updateSlider();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        header.parentElement.classList.toggle('active');
+    });
+});

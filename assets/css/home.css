@@ -614,11 +614,14 @@
     gap: 12px;
 }
 
-.footer-logos img {
-    height: 75px;
-    margin-top: -27px;
-    margin-right: -8px;
-    color: white;
+.footer-logos p{
+color: rgb(155 155 155);
+    cursor: pointer;
+    font-size: 17px;
+    font-family: 'Pacifico', cursive;
+}
+.footer-logos p:hover {
+    color: rgb(205 76 32);
 }
 
 .footer-bottom {
