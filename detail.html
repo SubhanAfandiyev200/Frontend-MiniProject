@@ -246,7 +246,6 @@
                                                         <a href="" class="acc-item">
                                                             <img src="./assets/images/acc1.avif">
                                                             <span>Attachables</span>
-                                                            <span class="badge badge-new">NEW</span>
                                                         </a>
                                                         <a href="" class="acc-item">
                                                             <img src="./assets/images/acc2.avif">
@@ -456,6 +455,140 @@
     </header>
     <main>
         <section id="main-product">
+            <div class="product-top">
+                <div class="product-gallery">
+                    <!-- Default gallery shows Raven (the active swatch below). -->
+                    <div class="product-gallery-main" id="mainImageWrap">
+                        <img id="mainProductImage" src="./assets/images/apex-slim-sleeve-raven-1.jpg"
+                            alt="Apex Slim Sleeve">
+                    </div>
+                    <div class="product-gallery-thumbs" id="galleryThumbs">
+                        <!-- 1/41 -->
+                        <div class="thumb is-active" data-img="./assets/images/apex-slim-sleeve-raven-1.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-1.jpg">
+                        </div>
+                        <!-- 2/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-2.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-2.jpg">
+                        </div>
+                        <!-- 3/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-3.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-3.jpg">
+                        </div>
+                        <!-- 4/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-4.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-4.jpg">
+                        </div>
+                        <!-- 5/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-5.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-5.jpg">
+                        </div>
+                        <!-- 6/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-6.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-6.jpg">
+                        </div>
+                        <!-- 7/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-7.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-7.jpg">
+                        </div>
+                        <!-- 8/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-8.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-8.jpg">
+                        </div>
+                        <!-- 9/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-9.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-9.jpg">
+                        </div>
+                        <!-- 10/41 -->
+                        <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-10.jpg">
+                            <img src="./assets/images/apex-slim-sleeve-raven-10.jpg">
+                        </div>
+                        <!-- 41/41 - video poster frame -->
+                        <div class="thumb thumb-video" data-video="https://www.youtube.com/embed/ENlfQ2I_DMI">
+                            <img src="./assets/images/apex-slim-sleeve-video-thumb.jpg">
+                            <i class="fa-solid fa-circle-play video-play-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <nav class="product-breadcrumb">
+                        <a href="">Shop</a> / <a href="">Wallets</a> / <a href="">Men's Wallets</a> / <span class="current">Apex Slim Sleeve</span>
+                    </nav>
+                    <h1 class="product-title">Apex Slim Sleeve</h1>
+                    <p class="product-price">$129</p>
+
+                    <div class="product-material">
+                        <p class="material-label">Material &amp; color:</p>
+                        <p class="material-value" id="materialValue">Premium leather (US$129)</p>
+                    </div>
+
+                    <div class="color-swatches">
+                        <!-- swatch thumbnails reuse photo 1 of each color's set (1/41, 11/41, 21/41, 31/41) -->
+                        <div class="color-swatch-wrap">
+                            <span class="color-swatch is-active" data-color="Raven"
+                                style="background-image:url(./assets/images/apex-slim-sleeve-raven-1.jpg)" title="Raven"></span>
+                            <span class="color-swatch-name">Raven</span>
+                        </div>
+
+                        <div class="color-swatch-wrap">
+                            <span class="color-swatch is-sold-out" data-color="Indigo"
+                                style="background-image:url(./assets/images/apex-slim-sleeve-indigo-1.jpg)" title="Indigo — Sold out"></span>
+                            <span class="color-swatch-name">Indigo</span>
+                        </div>
+
+                        <div class="color-swatch-wrap">
+                            <span class="color-swatch" data-color="Everglade"
+                                style="background-image:url(./assets/images/apex-slim-sleeve-everglade-1.jpg)" title="Everglade"></span>
+                            <span class="color-swatch-name">Everglade</span>
+                        </div>
+
+                        <div class="color-swatch-wrap">
+                            <span class="color-swatch" data-color="Espresso"
+                                style="background-image:url(./assets/images/apex-slim-sleeve-espresso-1.jpg)" title="Espresso"></span>
+                            <span class="color-swatch-name">Espresso</span>
+                        </div>
+                    </div>
+
+                    <div class="product-action">
+                        <button class="add-to-cart-btn" id="addToCartBtn">ADD TO CART</button>
+
+                        <div class="sold-out-notice" id="soldOutNotice">
+                            <p class="sold-out-message">That color has sold out. Sign up to be notified when it's back in stock.</p>
+                            <form class="email-box product-email-box" id="productEmailBox">
+                                <input type="email" placeholder="Enter your email address" required>
+                                <button class="submit-btn" type="submit">Submit</button>
+                            </form>
+                            <a href="" class="sold-out-link">Shop our range of other wallets &gt;</a>
+                        </div>
+
+                        <p class="shipping-note"><span class="shipping-flag">AZ</span>Ships within <span class="shipping-days">2 business days</span>.</p>
+                    </div>
+
+                    <div class="feature-block">
+                        <h2 class="feature-heading">A futuristic reimagining of our original Slim Sleeve and its
+                            sleek storage</h2>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <i class="fa-solid fa-layer-group"></i>
+                                <span>6–8 cards, folded bills</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-shapes"></i>
+                                <span>Pre-molded leather</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-magnet"></i>
+                                <span>Magnetic edge closure</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>RFID protected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="product-accordion-section">
                 <div class="product-accordion">
 
@@ -504,7 +637,9 @@
                                     </div>
                                 </div>
                                 <div class="spec-image">
-                                    <img src="./assets/images/wallet7.png">
+                                    <!-- Changes with the color swatch selected above. Just save each downloaded
+                                         dimension-diagram photo using the exact filename below - no code changes needed. -->
+                                    <img id="specImage" src="./assets/images/apex-slim-sleeve-raven-spec.jpg">
                                 </div>
                             </div>
                         </div>
