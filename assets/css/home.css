@@ -39,19 +39,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .header-left {
     display: flex;
     align-items: center;
     gap: 40px;
+    margin-left: -280px;
 }
 
 .top-header-logo img {
     height: 56.5px;
     width: auto;
     margin-top: -31px;
-    margin-left: 8px;
+    margin-left: -30px;
 }
 
 .header-navbar {
@@ -639,6 +641,11 @@ color: rgb(155 155 155);
     gap: 3px;
 }
 
+.footer-bottom-text {
+    display: flex;
+    gap: 3px;
+}
+
 .footer-bottom-left p {
     color: rgb(155 155 155);
     font-family: 'Poppins', sans-serif;
@@ -694,14 +701,22 @@ color: rgb(155 155 155);
 }
 
 .cards-viewport {
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding-bottom: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cards-viewport::-webkit-scrollbar {
+    display: none;
 }
 
 .cards-track {
     display: flex;
     gap: 4px;
-    transition: transform 0.45s ease;
 }
 
 .product-card {
@@ -2098,4 +2113,949 @@ color: rgb(155 155 155);
 
 .second-product-name:hover {
     color: #e8602a;
+}
+
+/* =====================================================
+   MEDIUM / TABLET RESPONSIVE (max-width: 991px)
+   ===================================================== */
+.hamburger-btn {
+    display: none !important;
+}
+
+.nav-caret {
+    display: none;
+}
+
+.nav-toggle {
+    position: absolute !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 1px !important;
+    height: 1px !important;
+}
+
+.mobile-nav-extra {
+    display: none !important;
+}
+
+.mobile-mail-icon {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+
+    /* ---------- layout containers ---------- */
+    .main-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* ---------- header ---------- */
+    .top-header {
+        display: none;
+    }
+
+    .header-row {
+        height: 75px;
+    }
+
+    .bottom-header {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mobile-left-icons {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .bottom-header-icons {
+        gap: 20px;
+    }
+
+    .bottom-header-icons i {
+        font-size: 23px;
+    }
+
+    .cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        top: -7px;
+        right: -8px;
+    }
+
+    .hamburger-btn {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 32px;
+        height: 32px;
+        color: #333;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .hamburger-btn .bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #333;
+        border-radius: 1px;
+        transition: transform 0.3s ease, opacity 0.2s ease;
+    }
+
+    .nav-toggle:checked~.mobile-left-icons .hamburger-btn .bar1 {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle:checked~.mobile-left-icons .hamburger-btn .bar2 {
+        opacity: 0;
+    }
+
+    .nav-toggle:checked~.mobile-left-icons .hamburger-btn .bar3 {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .header-left {
+        justify-content: center;
+        margin-left: 140px;
+    }
+
+    .top-header-logo img {
+        height: 42px;
+        margin-top: -5px;
+        margin-left: 40px;
+    }
+
+    .bottom-header-right ul {
+        gap: 16px;
+        margin-right: 0;
+    }
+
+    .bottom-header-right ul li:not(.bottom-header-icons) {
+        display: none;
+    }
+
+    /* ---------- mobile nav panel ---------- */
+    .header-navbar {
+        margin: 0;
+        position: fixed;
+        top: 75px;
+        left: 0;
+        width: 85%;
+        max-width: 360px;
+        height: calc(100vh - 75px);
+        background-color: #fff;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.35s ease;
+        z-index: 1500;
+        padding-bottom: 40px;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-navbar ul {
+        display: block;
+        gap: 0;
+    }
+
+    .nav-toggle:checked~.header-left nav .header-navbar {
+        transform: translateX(0);
+    }
+
+    .header-navbar ul li.nav-item {
+        border-bottom: 1px solid #eee;
+        position: static;
+    }
+
+    .header-navbar ul li.nav-item>a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 24px;
+        font-size: 15px;
+    }
+
+    .nav-caret {
+        display: inline-block;
+        font-size: 13px;
+        color: #999;
+        transition: transform 0.25s ease;
+    }
+
+    .nav-item.open>a .nav-caret {
+        transform: rotate(180deg);
+    }
+
+    .mega-menu {
+        position: static;
+        max-height: 0;
+        box-shadow: none;
+        border-top: none;
+        background-color: #fafafa;
+    }
+
+    .nav-item:hover .mega-menu {
+        max-height: 0;
+    }
+
+    .nav-item.open>.mega-menu {
+        max-height: 3000px !important;
+    }
+
+    .mega-menu>div {
+        opacity: 0;
+    }
+
+    .nav-item.open .mega-menu>div {
+        opacity: 1;
+        transition: opacity 0.3s ease 0.1s;
+    }
+
+    .mobile-nav-extra {
+        display: block !important;
+        list-style: none;
+    }
+
+    .mobile-nav-extra li {
+        border-bottom: 1px solid #eee;
+    }
+
+    .mobile-nav-extra a {
+        display: block;
+        padding: 16px 24px;
+        font-size: 15px;
+        font-family: GTUltra, Lato, sans-serif;
+        font-weight: 600;
+        color: rgb(51 51 51);
+        text-decoration: none;
+    }
+
+    .mobile-nav-extra a:hover {
+        color: #e8602a;
+    }
+
+    /* ---------- featured mega menu ---------- */
+    .first-mega-menu {
+        flex-direction: column;
+    }
+
+    .featured-mega-menu-left {
+        display: block;
+        margin: 0;
+        padding: 8px 24px 0;
+    }
+
+    .featured-mega-menu-left p {
+        margin: 14px 0 6px;
+    }
+
+    .featured-mega-menu-left ul {
+        margin: 0;
+    }
+
+    .featured-mega-menu-left li a {
+        display: block;
+        line-height: 2.1;
+        font-size: 14px;
+    }
+
+    .featured-mega-menu-right {
+        width: 100%;
+        height: auto;
+        margin: 10px 0 0;
+        padding: 8px 24px 24px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        row-gap: 10px;
+    }
+
+    .featured-mega-menu-right img,
+    .featured-mega-menu-right span {
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        font-size: 12px;
+    }
+
+    /* ---------- category sub-menus (bags / travel / wallet / tech / accessories) ---------- */
+    .bags-container,
+    .travel-container,
+    .wallet-container,
+    .tech-container,
+    .acc-container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .bags-menu,
+    .travel-menu,
+    .wallet-menu,
+    .tech-menu,
+    .acc-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 24px 24px;
+        gap: 0;
+        margin-left: 0;
+    }
+
+    .bags-item,
+    .travel-item,
+    .wallet-item,
+    .tech-item,
+    .acc-item {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        text-align: left;
+        gap: 0;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .bags-item img,
+    .travel-item img,
+    .wallet-item img,
+    .tech-item img,
+    .acc-item img {
+        display: none;
+    }
+
+    .bags-item span,
+    .travel-item span,
+    .wallet-item span,
+    .tech-item span,
+    .acc-item span {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .bags-item-all .plus-circle,
+    .travel-item-all .plus-circle,
+    .wallet-item-all .plus-circle,
+    .tech-item-all .plus-circle,
+    .acc-item-all .plus-circle {
+        display: none;
+    }
+
+    .acc-menu .badge {
+        margin-top: 0;
+        margin-left: auto;
+    }
+
+    /* ---------- about us sub-menu ---------- */
+    .about-menu {
+        display: flex;
+        flex-direction: column;
+        padding: 8px 24px 24px;
+        gap: 0;
+    }
+
+    .about-item {
+        flex-direction: row;
+        width: 100%;
+        text-align: left;
+        padding: 14px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .about-item img {
+        display: none;
+    }
+
+    /* ---------- search overlay ---------- */
+    .search-overlay-content {
+        padding: 0 24px;
+        height: 75px;
+        gap: 14px;
+    }
+
+    .search-overlay.active {
+        max-height: 75px;
+    }
+
+    .search-overlay-input,
+    .search-text-measure {
+        font-size: 26px;
+    }
+
+    .search-overlay-close {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    /* ---------- hero banner ---------- */
+    #main-top-picture {
+        height: 420px;
+    }
+
+    #main-top-picture h1 {
+        font-size: 2.4rem;
+        line-height: 2.7rem;
+        margin-bottom: 30px;
+    }
+
+    /* ---------- product slider ---------- */
+    .main-upper-cards-text {
+        height: 90px;
+    }
+
+    #main-upper-cards {
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .slider {
+        max-width: 100%;
+        padding: 0 12px;
+    }
+
+    .card-container {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .product-card-img,
+    .product-card-img.apex {
+        height: 210px;
+    }
+
+    .slider-arrow {
+        font-size: 32px;
+        top: 105px;
+    }
+
+    .slider-arrow.prev {
+        left: -6px;
+        top: 105px;
+    }
+
+    .slider-arrow.next {
+        right: -6px;
+        top: 105px;
+    }
+
+    /* ---------- image blocks ---------- */
+    .block {
+        position: relative;
+        height: 260px;
+        padding: 0;
+        justify-content: flex-end;
+    }
+
+    .block-text {
+        position: relative;
+        margin-left: 0;
+        margin-top: 0;
+        background-color: #fff;
+        color: rgb(51 51 51);
+        padding: 14px 18px 16px;
+    }
+
+    .block-text h3 {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        color: rgb(51 51 51);
+    }
+
+    .block-text span {
+        font-size: 0.78rem;
+        color: rgb(51 51 51);
+    }
+
+    .block-text i {
+        color: rgb(51 51 51);
+    }
+
+    /* ---------- video section ---------- */
+    #main-video {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .youtube-video {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .youtube-video iframe {
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* ---------- info cards ---------- */
+    #main-info-cards {
+        height: auto;
+        flex-wrap: nowrap;
+        gap: 18px;
+        padding: 36px 18px;
+    }
+
+    .info-card {
+        max-width: none;
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .info-img {
+        width: 92px;
+        height: 92px;
+        margin-bottom: 14px;
+    }
+
+    .info-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .info-card p {
+        font-size: 0.78rem;
+        line-height: 1.45;
+    }
+
+    .info-card a {
+        font-size: 0.68rem;
+    }
+
+    /* ---------- signup section ---------- */
+    #main-signup {
+        height: auto;
+        padding: 30px 20px 40px;
+    }
+
+    #main-signup h2 {
+        margin-left: 0;
+        line-height: 1.4;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #main-signup .email-box {
+        margin-top: 16px;
+    }
+
+    .email-box {
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .signupMessage {
+        width: 100%;
+        max-width: 440px;
+    }
+
+    /* ---------- footer ---------- */
+    .footer {
+        height: auto;
+        padding: 30px 24px;
+    }
+
+    .footer-top {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .top-footer-left {
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 24px;
+        order: 1;
+    }
+
+    .footer-col {
+        min-width: 0;
+        flex: 1 1 0;
+    }
+
+    .footer-col h4 {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .footer-col ul li a {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+        line-height: 2;
+    }
+
+    .top-footer-right {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        order: -1;
+    }
+
+    .footer-logos {
+        justify-content: flex-start;
+    }
+
+    .footer-bottom {
+        margin-left: -24px;
+        margin-right: -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .footer-bottom-left {
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footer-bottom-left img {
+        height: 180px;
+        margin-top: 10px;
+        margin-left: -20px;
+    }
+
+    .footer-bottom-left p {
+        margin-top: 0;
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .footer-bottom-left a {
+        margin-top: 0;
+        font-size: 14px;
+             margin-left: 3px;
+    }
+
+    .footer-bottom-text {
+        gap: 12px;
+    }
+
+    .footer-bottom-right {
+      align-items: center;
+      display: flex;
+        gap: 60px;
+    }
+     .footer-bottom-right a{
+        margin-top: 90px;
+        font-size: 18px;
+    }
+     .footer-bottom-right span{
+        margin-top: -10px;
+        font-size: 13px;
+        margin-right: -60px;
+    }
+
+    /* ---------- cart sidebar ---------- */
+    .cart-sidebar {
+        width: 85%;
+        max-width: 360px;
+        padding: 24px;
+    }
+
+    .cart-sidebar-upper {
+        width: calc(100% + 48px);
+        margin: -24px -24px 20px -24px;
+    }
+
+    .cart-sidebar-container {
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .cart-sidebar-center {
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .cart-sidebar-lower .go-to-checkout {
+        width: 100%;
+    }
+
+    /* ---------- signup modal ---------- */
+    .signup-modal {
+        width: 92%;
+        max-width: 520px;
+        height: auto;
+        max-height: 90vh;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .signup-modal-left {
+        width: 100%;
+        height: 260px;
+        order: 2;
+    }
+
+    .signup-modal-left img {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        object-fit: cover;
+    }
+
+    .signup-modal-right {
+        width: 100%;
+        padding: 30px 26px 26px;
+        order: 1;
+    }
+
+    .signup-modal-right .up-message {
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+        font-weight: 650;
+    }
+
+    .signup-modal-right span {
+        margin-left: 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+        font-weight: 550;
+    }
+
+    .signup-modal-right .email-box {
+        margin-left: 0;
+    }
+
+    .signup-modal-right .signupMessage {
+        margin-left: 0;
+    }
+
+    .signup-modal-right .lowest-message-main {
+        margin-top: 12px;
+    }
+
+    .signup-modal-right .lowest-message-main p {
+        margin-left: 0;
+        margin-bottom: 0;
+        font-size: 10px;
+    }
+}
+
+/* =====================================================
+   PHONE RESPONSIVE (max-width: 576px)
+   ===================================================== */
+.footer-caret {
+    display: none;
+}
+
+@media (max-width: 576px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ---------- header: keep logo/nav from pushing icons off-screen ---------- */
+    .header-left {
+        margin-left: 0;
+    }
+
+    /* ---------- header: mail icon moves next to hamburger ---------- */
+    .mobile-mail-icon {
+        display: flex !important;
+        align-items: center;
+        font-size: 23px;
+        color: #7f7f7f;
+    }
+
+    .bottom-header-icons .mail-icon-btn {
+        display: none;
+    }
+
+    /* ---------- product slider: 2 per view instead of 3 ---------- */
+    .product-card,
+    .product-card.apex {
+        flex: 0 0 calc(50vw - 14px);
+    }
+
+    .product-card-img,
+    .product-card-img.apex {
+        height: 170px;
+    }
+
+    .product-name {
+        font-size: 0.8rem;
+    }
+
+    .product-desc {
+        font-size: 11px;
+    }
+
+    .slider-arrow {
+        display: none;
+    }
+
+    /* ---------- image blocks: single column ---------- */
+    #main-center-pictures .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .block {
+        height: 220px;
+    }
+
+    /* ---------- info cards: stacked ---------- */
+    #main-info-cards {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 28px;
+        padding: 32px 24px;
+    }
+
+    .info-card {
+        width: 100%;
+        flex: none;
+    }
+
+    .info-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .info-card h3 {
+        font-size: 1.05rem;
+    }
+
+    .info-card p {
+        font-size: 0.8rem;
+    }
+
+    .info-card a {
+        font-size: 0.68rem;
+    }
+
+    /* ---------- footer: accordion columns ---------- */
+    .top-footer-left {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-col {
+        flex: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .footer-col h4 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+        cursor: pointer;
+    }
+
+    .footer-caret {
+        display: inline-block;
+        font-size: 10px;
+        transition: transform 0.25s ease;
+    }
+
+    .footer-col.open h4 .footer-caret {
+        transform: rotate(180deg);
+    }
+
+    .footer-col ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+
+    .footer-col.open ul {
+        max-height: 500px;
+        padding-bottom: 14px;
+    }
+
+    /* ---------- footer bottom: left-aligned, icon beside wrapping text ---------- */
+    .footer-bottom {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 10px;
+        row-gap: 2px;
+        align-items: center;
+        text-align: left;
+    }
+
+   
+    .footer-bottom-left {
+        display: contents;
+    }
+
+     .footer-bottom-left img {
+        grid-column: 1;
+        grid-row: 1 / span 2;   /* loqo hər iki sətri əhatə edir */
+        align-self: center;
+        height: 90px;           /* 100px idi → kiçildi */
+        margin: 0 0 0 -10px;
+    }
+
+     .footer-bottom-left p,
+    .footer-bottom-left a {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.3;
+        white-space: nowrap;
+    }
+
+       .footer-bottom-text {
+        grid-column: 2;
+        grid-row: 1;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        gap: 4px;
+    }
+
+      .footer-bottom-text p {
+        font-size: 12px;
+    }
+  .footer-bottom-right {
+        grid-column: 2;
+        grid-row: 2;
+        position: static;
+        transform: none;
+        margin: 0;
+    }
+
+    .footer-bottom-right a {
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    
+    .footer-bottom-right span {
+        font-size: 13px;
+    }
+
+    /* ---------- cart sidebar ---------- */
+    .cart-sidebar {
+        width: 82%;
+        max-width: 320px;
+    }
 }

@@ -27,6 +27,17 @@
                         <span>Worldwide shipping 🇦🇿</span>
                     </div>
                     <div class="bottom-header">
+                        <input type="checkbox" id="navToggle" class="nav-toggle">
+                        <div class="mobile-left-icons">
+                            <label for="navToggle" class="hamburger-btn" aria-label="Menu">
+                                <span class="bar bar1"></span>
+                                <span class="bar bar2"></span>
+                                <span class="bar bar3"></span>
+                            </label>
+                            <label for="mailToggle" class="mail-icon-btn mobile-mail-icon" aria-label="Sign up">
+                                <i class="fa-regular fa-envelope"></i>
+                            </label>
+                        </div>
                         <div class="header-left">
                             <div class="top-header-logo">
                                 <img src="./assets/images/Bellroy_logo.svg" alt="Bellroy">
@@ -35,7 +46,7 @@
                                 <div class="header-navbar">
                                     <ul>
                                         <li class="nav-item">
-                                            <a href="">Featured</a>
+                                            <a href="">Featured <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="first-mega-menu">
                                                     <div class="featured-mega-menu-left">
@@ -72,7 +83,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Bags & Luggage</a>
+                                            <a href="">Bags & Luggage <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="bags-container">
                                                     <div class="bags-menu">
@@ -116,7 +127,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Travel</a>
+                                            <a href="">Travel <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="travel-container">
                                                     <div class="travel-menu">
@@ -161,7 +172,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Wallets</a>
+                                            <a href="">Wallets <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="wallet-container">
                                                     <div class="wallet-menu">
@@ -194,7 +205,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Tech</a>
+                                            <a href="">Tech <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="tech-container">
                                                     <div class="tech-menu">
@@ -239,7 +250,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Accessories</a>
+                                            <a href="">Accessories <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="acc-container">
                                                     <div class="acc-menu">
@@ -272,7 +283,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">About Us</a>
+                                            <a href="">About Us <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="about-container">
                                                     <div class="about-menu">
@@ -307,6 +318,11 @@
                                                 </div>
                                             </div>
                                         </li>
+                                    </ul>
+                                    <ul class="mobile-nav-extra">
+                                        <li><a href="">Search</a></li>
+                                        <li><a href="">Find In-Store</a></li>
+                                        <li><a href="">Need help?</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -435,7 +451,11 @@
             <div class="signup-modal">
                 <label for="mailToggle" class="signup-modal-close"><i class="fa-solid fa-xmark"></i></label>
                 <div class="signup-modal-left">
-                    <img src="./assets/images/different-images.avif">
+                    <picture>
+                        <source media="(max-width: 991px)"
+                            srcset="./assets/images/newsletter-sign-up-image-mobile.avif">
+                        <img src="./assets/images/different-images.avif" alt="">
+                    </picture>
                 </div>
                 <div class="signup-modal-right">
                     <p class="up-message">GET IN FIRST</p>
@@ -796,7 +816,7 @@
                     <div class="footer-top">
                         <div class="top-footer-left">
                             <div class="footer-col">
-                                <h4>HELP</h4>
+                                <h4>HELP <i class="fa-solid fa-chevron-down footer-caret"></i></h4>
                                 <ul>
                                     <li><a href="">Customer Care</a></li>
                                     <li><a href="">Shipping & Returns</a></li>
@@ -811,7 +831,7 @@
                                 </ul>
                             </div>
                             <div class="footer-col">
-                                <h4>SHOP PRODUCTS</h4>
+                                <h4>SHOP PRODUCTS <i class="fa-solid fa-chevron-down footer-caret"></i></h4>
                                 <ul>
                                     <li><a href="">Shop All Products</a></li>
                                     <li><a href="">Backpacks</a></li>
@@ -827,7 +847,7 @@
                                 </ul>
                             </div>
                             <div class="footer-col">
-                                <h4>NAVIGATE THE RANGE</h4>
+                                <h4>NAVIGATE THE RANGE <i class="fa-solid fa-chevron-down footer-caret"></i></h4>
                                 <ul>
                                     <li><a href="">Collections</a></li>
                                     <li><a href="">Bestsellers</a></li>
@@ -837,7 +857,7 @@
                                 </ul>
                             </div>
                             <div class="footer-col">
-                                <h4>ABOUT</h4>
+                                <h4>ABOUT <i class="fa-solid fa-chevron-down footer-caret"></i></h4>
                                 <ul>
                                     <li><a href="">Our Story</a></li>
                                     <li><a href="">Our Materials</a></li>
@@ -871,9 +891,10 @@
                     <div class="footer-bottom">
                         <div class="footer-bottom-left">
                             <img src="./assets/images/2018-B-Corp-Logo-White.webp">
-                            <p>Got a question?</p>
-                            <p>Contact</p>
-                            <a href="">support@bellroy.com</a>
+                            <div class="footer-bottom-text">
+                                <p>Got a question?</p>
+                                <p>Contact <a href="">support@bellroy.com</a></p>
+                            </div>
                         </div>
                         <div class="footer-bottom-right">
                             <span>All rights reserved © 2026 Bellroy Pty Ltd</span>
