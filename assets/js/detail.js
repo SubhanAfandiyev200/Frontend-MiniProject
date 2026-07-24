@@ -1,5 +1,9 @@
 "use strict"
 
+document.getElementById('backToTopBtn').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 document.querySelectorAll('.email-box').forEach(box => {
     const input = box.querySelector('input');
     const btn = box.querySelector('.submit-btn');
@@ -20,11 +24,16 @@ document.querySelectorAll('.email-box').forEach(box => {
     }
 });
 
+function isMobileNav() {
+    return window.matchMedia('(max-width: 991px)').matches;
+}
+
 const headerNavbar = document.querySelector('.header-navbar');
 const navItems = document.querySelectorAll('.nav-item');
 let isMenuOpen = false;
 navItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
+        if (isMobileNav()) return;
         if (isMenuOpen) {
             headerNavbar.classList.add('switching');
         } else {
@@ -34,8 +43,27 @@ navItems.forEach(item => {
     });
 });
 headerNavbar.addEventListener('mouseleave', () => {
+    if (isMobileNav()) return;
     isMenuOpen = false;
     headerNavbar.classList.remove('switching');
+});
+
+navItems.forEach(item => {
+    const topLink = item.querySelector(':scope > a');
+    topLink.addEventListener('click', (e) => {
+        if (!isMobileNav()) return;
+        e.preventDefault();
+        const wasOpen = item.classList.contains('open');
+        navItems.forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+    });
+});
+
+const navToggle = document.getElementById('navToggle');
+navToggle.addEventListener('change', () => {
+    if (!navToggle.checked) {
+        navItems.forEach(i => i.classList.remove('open'));
+    }
 });
 
 const searchIconBtn = document.querySelector('.search-icon-btn');
@@ -79,25 +107,40 @@ function closeCart() {
 cartSidebarClose.addEventListener('click', closeCart);
 cartSidebarBackdrop.addEventListener('click', closeCart);
 
-const track = document.querySelector('.cards-track');
+function isPhoneNav() {
+    return window.matchMedia('(max-width: 576px)').matches;
+}
+
+document.querySelectorAll('.footer-col > h4').forEach(heading => {
+    heading.addEventListener('click', () => {
+        if (!isPhoneNav()) return;
+        heading.parentElement.classList.toggle('open');
+    });
+});
+
+const viewport = document.querySelector('.cards-viewport');
 const cards = document.querySelectorAll('.product-card');
 const prevBtn = document.querySelector('.slider-arrow.prev');
 const nextBtn = document.querySelector('.slider-arrow.next');
-let index = 0;
-const visible = 3;
+function visibleCount() {
+    return isPhoneNav() ? 2 : 3;
+}
+function cardStep() {
+    return cards[1].offsetLeft - cards[0].offsetLeft;
+}
 function updateSlider() {
-    const step = cards[1].offsetLeft - cards[0].offsetLeft;
-    track.style.transform = `translateX(${-index * step}px)`;
-
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index >= cards.length - visible;
+    const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+    prevBtn.disabled = viewport.scrollLeft <= 1;
+    nextBtn.disabled = viewport.scrollLeft >= maxScroll - 1;
 }
 nextBtn.addEventListener('click', () => {
-    if (index < cards.length - visible) { index++; updateSlider(); }
+    viewport.scrollBy({ left: cardStep() * visibleCount(), behavior: 'smooth' });
 });
 prevBtn.addEventListener('click', () => {
-    if (index > 0) { index--; updateSlider(); }
+    viewport.scrollBy({ left: -cardStep() * visibleCount(), behavior: 'smooth' });
 });
+viewport.addEventListener('scroll', updateSlider);
+window.addEventListener('resize', updateSlider);
 updateSlider();
 document.querySelectorAll('.accordion-header').forEach(header => {
     header.addEventListener('click', () => {
@@ -113,8 +156,6 @@ const soldOutNotice = document.getElementById('soldOutNotice');
 const shippingNote = document.querySelector('.shipping-note');
 const specImage = document.getElementById('specImage');
 
-// Specifications-tab dimension diagram, one per color. Just save each downloaded
-// photo using the exact filename below - no code changes needed.
 const specImages = {
     Raven: "./assets/images/apex-slim-sleeve-raven-spec.jpg",
     Indigo: "./assets/images/apex-slim-sleeve-indigo-spec.jpg",
@@ -124,59 +165,57 @@ const specImages = {
 
 const videoThumb = {
     video: "https://www.youtube.com/embed/ENlfQ2I_DMI",
-    poster: "./assets/images/apex-slim-sleeve-video-thumb.jpg" // 41/41 - video poster frame
+    poster: "./assets/images/apex-slim-sleeve-video-thumb.jpg"
 };
 
-// 40 real photos needed total (10 per color) + the video poster above = 41 files.
-// Save each downloaded photo using the exact filename on its line.
 const colorGalleries = {
     Raven: [
-        "./assets/images/apex-slim-sleeve-raven-1.jpg",  // 1/41
-        "./assets/images/apex-slim-sleeve-raven-2.jpg",  // 2/41
-        "./assets/images/apex-slim-sleeve-raven-3.jpg",  // 3/41
-        "./assets/images/apex-slim-sleeve-raven-4.jpg",  // 4/41
-        "./assets/images/apex-slim-sleeve-raven-5.jpg",  // 5/41
-        "./assets/images/apex-slim-sleeve-raven-6.jpg",  // 6/41
-        "./assets/images/apex-slim-sleeve-raven-7.jpg",  // 7/41
-        "./assets/images/apex-slim-sleeve-raven-8.jpg",  // 8/41
-        "./assets/images/apex-slim-sleeve-raven-9.jpg",  // 9/41
-        "./assets/images/apex-slim-sleeve-raven-10.jpg", // 10/41
+        "./assets/images/apex-slim-sleeve-raven-1.jpg",
+        "./assets/images/apex-slim-sleeve-raven-2.jpg",
+        "./assets/images/apex-slim-sleeve-raven-3.jpg",
+        "./assets/images/apex-slim-sleeve-raven-4.jpg",
+        "./assets/images/apex-slim-sleeve-raven-5.jpg",
+        "./assets/images/apex-slim-sleeve-raven-6.jpg",
+        "./assets/images/apex-slim-sleeve-raven-7.jpg",
+        "./assets/images/apex-slim-sleeve-raven-8.jpg",
+        "./assets/images/apex-slim-sleeve-raven-9.jpg",
+        "./assets/images/apex-slim-sleeve-raven-10.jpg",
     ],
     Indigo: [
-        "./assets/images/apex-slim-sleeve-indigo-1.jpg",  // 11/41
-        "./assets/images/apex-slim-sleeve-indigo-2.jpg",  // 12/41
-        "./assets/images/apex-slim-sleeve-indigo-3.jpg",  // 13/41
-        "./assets/images/apex-slim-sleeve-indigo-4.jpg",  // 14/41
-        "./assets/images/apex-slim-sleeve-indigo-5.jpg",  // 15/41
-        "./assets/images/apex-slim-sleeve-indigo-6.jpg",  // 16/41
-        "./assets/images/apex-slim-sleeve-indigo-7.jpg",  // 17/41
-        "./assets/images/apex-slim-sleeve-indigo-8.jpg",  // 18/41
-        "./assets/images/apex-slim-sleeve-indigo-9.jpg",  // 19/41
-        "./assets/images/apex-slim-sleeve-indigo-10.jpg", // 20/41
+        "./assets/images/apex-slim-sleeve-indigo-1.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-2.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-3.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-4.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-5.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-6.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-7.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-8.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-9.jpg",
+        "./assets/images/apex-slim-sleeve-indigo-10.jpg",
     ],
     Everglade: [
-        "./assets/images/apex-slim-sleeve-everglade-1.jpg",  // 21/41
-        "./assets/images/apex-slim-sleeve-everglade-2.jpg",  // 22/41
-        "./assets/images/apex-slim-sleeve-everglade-3.jpg",  // 23/41
-        "./assets/images/apex-slim-sleeve-everglade-4.jpg",  // 24/41
-        "./assets/images/apex-slim-sleeve-everglade-5.jpg",  // 25/41
-        "./assets/images/apex-slim-sleeve-everglade-6.jpg",  // 26/41
-        "./assets/images/apex-slim-sleeve-everglade-7.jpg",  // 27/41
-        "./assets/images/apex-slim-sleeve-everglade-8.jpg",  // 28/41
-        "./assets/images/apex-slim-sleeve-everglade-9.jpg",  // 29/41
-        "./assets/images/apex-slim-sleeve-everglade-10.jpg", // 30/41
+        "./assets/images/apex-slim-sleeve-everglade-1.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-2.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-3.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-4.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-5.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-6.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-7.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-8.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-9.jpg",
+        "./assets/images/apex-slim-sleeve-everglade-10.jpg",
     ],
     Espresso: [
-        "./assets/images/apex-slim-sleeve-espresso-1.jpg",  // 31/41
-        "./assets/images/apex-slim-sleeve-espresso-2.jpg",  // 32/41
-        "./assets/images/apex-slim-sleeve-espresso-3.jpg",  // 33/41
-        "./assets/images/apex-slim-sleeve-espresso-4.jpg",  // 34/41
-        "./assets/images/apex-slim-sleeve-espresso-5.jpg",  // 35/41
-        "./assets/images/apex-slim-sleeve-espresso-6.jpg",  // 36/41
-        "./assets/images/apex-slim-sleeve-espresso-7.jpg",  // 37/41
-        "./assets/images/apex-slim-sleeve-espresso-8.jpg",  // 38/41
-        "./assets/images/apex-slim-sleeve-espresso-9.jpg",  // 39/41
-        "./assets/images/apex-slim-sleeve-espresso-10.jpg", // 40/41
+        "./assets/images/apex-slim-sleeve-espresso-1.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-2.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-3.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-4.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-5.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-6.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-7.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-8.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-9.jpg",
+        "./assets/images/apex-slim-sleeve-espresso-10.jpg",
     ]
 };
 
@@ -204,7 +243,6 @@ function toggleAddToCart(swatch) {
     }
 }
 
-// rebuilds the whole bottom thumbnail strip with the given color's photo set
 function renderThumbs(images) {
     const photosHtml = images.map((src, i) =>
         `<div class="thumb${i === 0 ? ' is-active' : ''}" data-img="${src}"><img src="${src}"></div>`
@@ -234,7 +272,6 @@ function attachThumbListeners() {
     });
 }
 
-// color swatch click -> swaps the ENTIRE thumbnail strip to that color's photos + updates main image + toggles sold-out email box
 swatches.forEach(swatch => {
     swatch.addEventListener('click', () => {
         clearActiveSwatches();

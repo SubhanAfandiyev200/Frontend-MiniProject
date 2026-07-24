@@ -27,6 +27,17 @@
                         <span>Worldwide shipping 🇦🇿</span>
                     </div>
                     <div class="bottom-header">
+                        <input type="checkbox" id="navToggle" class="nav-toggle">
+                        <div class="mobile-left-icons">
+                            <label for="navToggle" class="hamburger-btn" aria-label="Menu">
+                                <span class="bar bar1"></span>
+                                <span class="bar bar2"></span>
+                                <span class="bar bar3"></span>
+                            </label>
+                            <label for="mailToggle" class="mail-icon-btn mobile-mail-icon" aria-label="Sign up">
+                                <i class="fa-regular fa-envelope"></i>
+                            </label>
+                        </div>
                         <div class="header-left">
                             <div class="top-header-logo">
                                 <img src="./assets/images/Bellroy_logo.svg" alt="Bellroy">
@@ -35,7 +46,7 @@
                                 <div class="header-navbar">
                                     <ul>
                                         <li class="nav-item">
-                                            <a href="">Featured</a>
+                                            <a href="">Featured <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="first-mega-menu">
                                                     <div class="featured-mega-menu-left">
@@ -72,7 +83,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Bags & Luggage</a>
+                                            <a href="">Bags & Luggage <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="bags-container">
                                                     <div class="bags-menu">
@@ -116,7 +127,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Travel</a>
+                                            <a href="">Travel <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="travel-container">
                                                     <div class="travel-menu">
@@ -161,7 +172,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Wallets</a>
+                                            <a href="">Wallets <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="wallet-container">
                                                     <div class="wallet-menu">
@@ -194,7 +205,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Tech</a>
+                                            <a href="">Tech <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="tech-container">
                                                     <div class="tech-menu">
@@ -239,7 +250,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">Accessories</a>
+                                            <a href="">Accessories <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="acc-container">
                                                     <div class="acc-menu">
@@ -272,7 +283,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="">About Us</a>
+                                            <a href="">About Us <i class="fa-solid fa-chevron-down nav-caret"></i></a>
                                             <div class="mega-menu">
                                                 <div class="about-container">
                                                     <div class="about-menu">
@@ -307,6 +318,11 @@
                                                 </div>
                                             </div>
                                         </li>
+                                    </ul>
+                                    <ul class="mobile-nav-extra">
+                                        <li><a href="">Search</a></li>
+                                        <li><a href="">Find In-Store</a></li>
+                                        <li><a href="">Need help?</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -435,7 +451,11 @@
             <div class="signup-modal">
                 <label for="mailToggle" class="signup-modal-close"><i class="fa-solid fa-xmark"></i></label>
                 <div class="signup-modal-left">
-                    <img src="./assets/images/different-images.avif">
+                    <picture>
+                        <source media="(max-width: 991px)"
+                            srcset="./assets/images/newsletter-sign-up-image-mobile.avif">
+                        <img src="./assets/images/different-images.avif" alt="">
+                    </picture>
                 </div>
                 <div class="signup-modal-right">
                     <p class="up-message">GET IN FIRST</p>
@@ -457,53 +477,41 @@
         <section id="main-product">
             <div class="product-top">
                 <div class="product-gallery">
-                    <!-- Default gallery shows Raven (the active swatch below). -->
                     <div class="product-gallery-main" id="mainImageWrap">
                         <img id="mainProductImage" src="./assets/images/apex-slim-sleeve-raven-1.jpg"
                             alt="Apex Slim Sleeve">
                     </div>
                     <div class="product-gallery-thumbs" id="galleryThumbs">
-                        <!-- 1/41 -->
                         <div class="thumb is-active" data-img="./assets/images/apex-slim-sleeve-raven-1.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-1.jpg">
                         </div>
-                        <!-- 2/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-2.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-2.jpg">
                         </div>
-                        <!-- 3/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-3.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-3.jpg">
                         </div>
-                        <!-- 4/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-4.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-4.jpg">
                         </div>
-                        <!-- 5/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-5.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-5.jpg">
                         </div>
-                        <!-- 6/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-6.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-6.jpg">
                         </div>
-                        <!-- 7/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-7.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-7.jpg">
                         </div>
-                        <!-- 8/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-8.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-8.jpg">
                         </div>
-                        <!-- 9/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-9.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-9.jpg">
                         </div>
-                        <!-- 10/41 -->
                         <div class="thumb" data-img="./assets/images/apex-slim-sleeve-raven-10.jpg">
                             <img src="./assets/images/apex-slim-sleeve-raven-10.jpg">
                         </div>
-                        <!-- 41/41 - video poster frame -->
                         <div class="thumb thumb-video" data-video="https://www.youtube.com/embed/ENlfQ2I_DMI">
                             <img src="./assets/images/apex-slim-sleeve-video-thumb.jpg">
                             <i class="fa-solid fa-circle-play video-play-icon"></i>
@@ -523,46 +531,47 @@
                         <p class="material-value" id="materialValue">Premium leather (US$129)</p>
                     </div>
 
-                    <div class="color-swatches">
-                        <!-- swatch thumbnails reuse photo 1 of each color's set (1/41, 11/41, 21/41, 31/41) -->
-                        <div class="color-swatch-wrap">
-                            <span class="color-swatch is-active" data-color="Raven"
-                                style="background-image:url(./assets/images/apex-slim-sleeve-raven-1.jpg)" title="Raven"></span>
-                            <span class="color-swatch-name">Raven</span>
+                    <div class="product-buybox">
+                        <div class="color-swatches">
+                            <div class="color-swatch-wrap">
+                                <span class="color-swatch is-active" data-color="Raven"
+                                    style="background-image:url(./assets/images/apex-slim-sleeve-raven-1.jpg)" title="Raven"></span>
+                                <span class="color-swatch-name">Raven</span>
+                            </div>
+
+                            <div class="color-swatch-wrap">
+                                <span class="color-swatch is-sold-out" data-color="Indigo"
+                                    style="background-image:url(./assets/images/apex-slim-sleeve-indigo-1.jpg)" title="Indigo — Sold out"></span>
+                                <span class="color-swatch-name">Indigo</span>
+                            </div>
+
+                            <div class="color-swatch-wrap">
+                                <span class="color-swatch" data-color="Everglade"
+                                    style="background-image:url(./assets/images/apex-slim-sleeve-everglade-1.jpg)" title="Everglade"></span>
+                                <span class="color-swatch-name">Everglade</span>
+                            </div>
+
+                            <div class="color-swatch-wrap">
+                                <span class="color-swatch" data-color="Espresso"
+                                    style="background-image:url(./assets/images/apex-slim-sleeve-espresso-1.jpg)" title="Espresso"></span>
+                                <span class="color-swatch-name">Espresso</span>
+                            </div>
                         </div>
 
-                        <div class="color-swatch-wrap">
-                            <span class="color-swatch is-sold-out" data-color="Indigo"
-                                style="background-image:url(./assets/images/apex-slim-sleeve-indigo-1.jpg)" title="Indigo — Sold out"></span>
-                            <span class="color-swatch-name">Indigo</span>
+                        <div class="product-action">
+                            <button class="add-to-cart-btn" id="addToCartBtn">ADD TO CART</button>
+
+                            <div class="sold-out-notice" id="soldOutNotice">
+                                <p class="sold-out-message">That color has sold out. Sign up to be notified when it's back in stock.</p>
+                                <form class="email-box product-email-box" id="productEmailBox">
+                                    <input type="email" placeholder="Enter your email address" required>
+                                    <button class="submit-btn" type="submit">Submit</button>
+                                </form>
+                                <a href="" class="sold-out-link">Shop our range of other wallets &gt;</a>
+                            </div>
+
+                            <p class="shipping-note"><span class="shipping-flag">AZ</span>Ships within <span class="shipping-days">2 business days</span>.</p>
                         </div>
-
-                        <div class="color-swatch-wrap">
-                            <span class="color-swatch" data-color="Everglade"
-                                style="background-image:url(./assets/images/apex-slim-sleeve-everglade-1.jpg)" title="Everglade"></span>
-                            <span class="color-swatch-name">Everglade</span>
-                        </div>
-
-                        <div class="color-swatch-wrap">
-                            <span class="color-swatch" data-color="Espresso"
-                                style="background-image:url(./assets/images/apex-slim-sleeve-espresso-1.jpg)" title="Espresso"></span>
-                            <span class="color-swatch-name">Espresso</span>
-                        </div>
-                    </div>
-
-                    <div class="product-action">
-                        <button class="add-to-cart-btn" id="addToCartBtn">ADD TO CART</button>
-
-                        <div class="sold-out-notice" id="soldOutNotice">
-                            <p class="sold-out-message">That color has sold out. Sign up to be notified when it's back in stock.</p>
-                            <form class="email-box product-email-box" id="productEmailBox">
-                                <input type="email" placeholder="Enter your email address" required>
-                                <button class="submit-btn" type="submit">Submit</button>
-                            </form>
-                            <a href="" class="sold-out-link">Shop our range of other wallets &gt;</a>
-                        </div>
-
-                        <p class="shipping-note"><span class="shipping-flag">AZ</span>Ships within <span class="shipping-days">2 business days</span>.</p>
                     </div>
 
                     <div class="feature-block">
@@ -637,8 +646,6 @@
                                     </div>
                                 </div>
                                 <div class="spec-image">
-                                    <!-- Changes with the color swatch selected above. Just save each downloaded
-                                         dimension-diagram photo using the exact filename below - no code changes needed. -->
                                     <img id="specImage" src="./assets/images/apex-slim-sleeve-raven-spec.jpg">
                                 </div>
                             </div>
@@ -943,6 +950,7 @@
                     </div>
                 </div>
             </section>
+            <button type="button" id="backToTopBtn" class="back-to-top-btn">BACK TO TOP <i class="fa-solid fa-chevron-up"></i></button>
             <section id="main-signup">
                 <h2> Sign up for new releases and subscriber exclusives</h2>
                 <div class="email-box">
@@ -965,7 +973,7 @@
                     <div class="footer-top">
                         <div class="top-footer-left">
                             <div class="footer-col">
-                                <h4>HELP</h4>
+                                <h4>HELP <i class="fa-solid fa-chevron-down footer-caret"></i></h4>
                                 <ul>
                                     <li><a href="">Customer Care</a></li>
                                     <li><a href="">Shipping & Returns</a></li>
@@ -980,7 +988,7 @@
                                 </ul>
                             </div>
                             <div class="footer-col">
-                                <h4>SHOP PRODUCTS</h4>
+                                <h4>SHOP PRODUCTS <i class="fa-solid fa-chevron-down footer-caret"></i></h4>
                                 <ul>
                                     <li><a href="">Shop All Products</a></li>
                                     <li><a href="">Backpacks</a></li>
@@ -996,7 +1004,7 @@
                                 </ul>
                             </div>
                             <div class="footer-col">
-                                <h4>NAVIGATE THE RANGE</h4>
+                                <h4>NAVIGATE THE RANGE <i class="fa-solid fa-chevron-down footer-caret"></i></h4>
                                 <ul>
                                     <li><a href="">Collections</a></li>
                                     <li><a href="">Bestsellers</a></li>
@@ -1006,7 +1014,7 @@
                                 </ul>
                             </div>
                             <div class="footer-col">
-                                <h4>ABOUT</h4>
+                                <h4>ABOUT <i class="fa-solid fa-chevron-down footer-caret"></i></h4>
                                 <ul>
                                     <li><a href="">Our Story</a></li>
                                     <li><a href="">Our Materials</a></li>
@@ -1040,9 +1048,10 @@
                     <div class="footer-bottom">
                         <div class="footer-bottom-left">
                             <img src="./assets/images/2018-B-Corp-Logo-White.webp">
-                            <p>Got a question?</p>
-                            <p>Contact</p>
-                            <a href="">support@bellroy.com</a>
+                            <div class="footer-bottom-text">
+                                <p>Got a question?</p>
+                                <p>Contact <a href="">support@bellroy.com</a></p>
+                            </div>
                         </div>
                         <div class="footer-bottom-right">
                             <span>All rights reserved © 2026 Bellroy Pty Ltd</span>
