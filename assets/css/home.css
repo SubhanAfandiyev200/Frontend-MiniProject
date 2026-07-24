@@ -2377,6 +2377,11 @@ color: rgb(155 155 155);
         row-gap: 10px;
     }
 
+    .featured-mega-menu-right > p {
+        grid-column: 1 / -1;
+        margin-bottom: 16px;
+    }
+
     .featured-mega-menu-right img,
     .featured-mega-menu-right span {
         width: 100%;

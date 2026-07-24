@@ -2704,8 +2704,16 @@ color:rgb(219 219 219);
         text-decoration: none;
     }
 
-    .mobile-nav-extra a:hover {
-        color: #e8602a;
+    .header-navbar a:hover,
+    .mobile-nav-extra a:hover,
+    .featured-mega-menu-left li a:hover,
+    .bags-item:hover span,
+    .travel-item:hover span,
+    .wallet-item:hover span,
+    .tech-item:hover span,
+    .acc-item:hover span:not(.badge),
+    .about-item:hover span {
+        color: rgb(51 51 51);
     }
 
     .first-mega-menu {
@@ -2741,6 +2749,11 @@ color:rgb(219 219 219);
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         row-gap: 10px;
+    }
+
+    .featured-mega-menu-right > p {
+        grid-column: 1 / -1;
+        margin-bottom: 16px;
     }
 
     .featured-mega-menu-right img,

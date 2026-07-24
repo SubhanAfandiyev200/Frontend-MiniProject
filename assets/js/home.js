@@ -24,16 +24,20 @@ function visibleCount() {
 function cardStep() {
     return cards[1].offsetLeft - cards[0].offsetLeft;
 }
+function clickStep() {
+    if (window.matchMedia('(max-width: 576px)').matches) return visibleCount();
+    return 1;
+}
 function updateSlider() {
     const maxScroll = viewport.scrollWidth - viewport.clientWidth;
     prevBtn.disabled = viewport.scrollLeft <= 1;
     nextBtn.disabled = viewport.scrollLeft >= maxScroll - 1;
 }
 nextBtn.addEventListener('click', () => {
-    viewport.scrollBy({ left: cardStep() * visibleCount(), behavior: 'smooth' });
+    viewport.scrollBy({ left: cardStep() * clickStep(), behavior: 'smooth' });
 });
 prevBtn.addEventListener('click', () => {
-    viewport.scrollBy({ left: -cardStep() * visibleCount(), behavior: 'smooth' });
+    viewport.scrollBy({ left: -cardStep() * clickStep(), behavior: 'smooth' });
 });
 viewport.addEventListener('scroll', updateSlider);
 window.addEventListener('resize', updateSlider);
