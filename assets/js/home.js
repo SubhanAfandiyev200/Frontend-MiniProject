@@ -4,11 +4,15 @@ document.querySelectorAll('.email-box').forEach(box => {
     const input = box.querySelector('input');
     const btn = box.querySelector('.submit-btn');
     const msg = box.parentElement.querySelector('.signupMessage');
+    const isModal = box.closest('.signup-modal-right') !== null;
 
     input.addEventListener('focus', () => btn.classList.add('active'));
     input.addEventListener('blur', () => btn.classList.remove('active'));
     btn.addEventListener('click', () => {
-        msg.textContent = "Check your email for a confirmation message. Thanks for subscribing!";
+        if (!msg) return;
+        msg.textContent = isModal
+            ? "Check your email for a confirmation message."
+            : "Check your email for a confirmation message. Thanks for subscribing!";
     });
 });
 

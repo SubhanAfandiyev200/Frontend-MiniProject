@@ -8,6 +8,7 @@ document.querySelectorAll('.email-box').forEach(box => {
     const input = box.querySelector('input');
     const btn = box.querySelector('.submit-btn');
     const msg = box.parentElement.querySelector('.signupMessage');
+    const isModal = box.closest('.signup-modal-right') !== null;
 
     input.addEventListener('focus', () => btn.classList.add('active'));
     input.addEventListener('blur', () => btn.classList.remove('active'));
@@ -15,11 +16,15 @@ document.querySelectorAll('.email-box').forEach(box => {
     if (box.tagName === 'FORM') {
         box.addEventListener('submit', e => {
             e.preventDefault();
-            if (msg) msg.textContent = "Check your email for a confirmation message. Thanks for subscribing!";
+            if (msg) msg.textContent = isModal
+                ? "Check your email for a confirmation message."
+                : "Check your email for a confirmation message. Thanks for subscribing!";
         });
     } else {
         btn.addEventListener('click', () => {
-            if (msg) msg.textContent = "Check your email for a confirmation message. Thanks for subscribing!";
+            if (msg) msg.textContent = isModal
+                ? "Check your email for a confirmation message."
+                : "Check your email for a confirmation message. Thanks for subscribing!";
         });
     }
 });
